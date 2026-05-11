@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Уютная кухня - домашняя кухня в центре города. Онлайн бронирование столика."
+    />
+    <title>Уютная кухня - лендинг кафе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page" id="top">
+      <div class="layout-frame">
+        <header class="site-header">
+          <a class="logo" href="#top" aria-label="Уютная кухня, на главную">
+            <span class="logo__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="M9 5v11a4 4 0 0 0 8 0V5" />
+                <path d="M9 11h8" />
+                <path d="M23 5v22" />
+                <path d="M6 27h20" />
+              </svg>
+            </span>
+            <span>Уютная кухня</span>
+          </a>
+
+          <nav class="main-nav" aria-label="Основная навигация">
+            <a href="#gallery">Меню</a>
+            <a href="#booking">К бронированию</a>
+          </nav>
+        </header>
+
+        <section class="hero" aria-labelledby="hero-title">
+          <img src="images/hero.jpg" alt="Уютный зал кафе с сервированным столом" />
+          <div class="hero__body">
+            <h1 id="hero-title">Домашняя кухня в центре города</h1>
+            <p>Бронируйте стол онлайн - мы подготовим всё к вашему приходу.</p>
+            <a class="button" href="#booking">Забронировать стол</a>
+          </div>
+        </section>
+
+        <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+          <h2 class="visually-hidden" id="gallery-title">Галерея блюд и атмосферы кафе</h2>
+          <p class="gallery__text">
+            Нравится атмосфера?
+            <a href="#booking">перейти к форме бронирования</a>
+          </p>
+
+          <div class="slider-shell">
+            <button
+              class="slider-button slider-button--prev"
+              type="button"
+              data-slider-prev
+              aria-label="Предыдущий слайд"
+            >
+              ‹
+            </button>
+
+            <div class="slider" data-slider tabindex="0" aria-roledescription="carousel">
+              <article class="slide is-active" aria-label="1 из 5">
+                <img src="images/3.jpg" alt="Горячее блюдо в керамической форме" />
+              </article>
+              <article class="slide" aria-label="2 из 5">
+                <img src="images/2.jpg" alt="Стакан кофе навынос" />
+              </article>
+              <article class="slide" aria-label="3 из 5">
+                <img src="images/1.jpg" alt="Шоколад и орехи" />
+              </article>
+              <article class="slide" aria-label="4 из 5">
+                <img src="images/6.jpg" alt="Салат с зеленью и томатами" />
+              </article>
+              <article class="slide" aria-label="5 из 5">
+                <img src="images/9.jpg" alt="Свежие булочки в корзине" />
+              </article>
+            </div>
+
+            <button
+              class="slider-button slider-button--next"
+              type="button"
+              data-slider-next
+              aria-label="Следующий слайд"
+            >
+              ›
+            </button>
+          </div>
+
+          <div class="slider-dots" data-slider-dots aria-label="Выбор слайда"></div>
+        </section>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Частые вопросы</h2>
+
+          <div class="accordion">
+            <details class="accordion__item">
+              <summary>Часы работы</summary>
+              <p>Пн-Чт 10:00-22:00 · Пт-Сб 10:00-23:00 · Вс 11:00-21:00</p>
+            </details>
+
+            <details class="accordion__item">
+              <summary>Как добраться</summary>
+              <p>м. Тверская, 5 минут пешком. Вход со двора, домофон 42.</p>
+            </details>
+
+            <details class="accordion__item">
+              <summary>Детям и особые пожелания</summary>
+              <p>Детское меню и стульчики. Сообщите об аллергиях в форме бронирования.</p>
+            </details>
+          </div>
+        </section>
+
+        <section class="booking-card" id="booking" aria-labelledby="booking-title">
+          <h2 id="booking-title">Бронирование стола</h2>
+          <p>Заполните поля - перезвоним для подтверждения.</p>
+
+          <form class="booking-form" novalidate data-booking-form>
+            <div class="form-field">
+              <label for="name">Имя</label>
+              <input id="name" name="name" type="text" autocomplete="given-name" minlength="2" required />
+              <span class="form-field__error" data-error-for="name" aria-live="polite"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="surname">Фамилия</label>
+              <input id="surname" name="surname" type="text" autocomplete="family-name" minlength="2" required />
+              <span class="form-field__error" data-error-for="surname" aria-live="polite"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <span class="form-field__error" data-error-for="email" aria-live="polite"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Телефон</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required />
+              <span class="form-field__error" data-error-for="phone" aria-live="polite"></span>
+            </div>
+
+            <button class="button button--submit" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <div class="modal" data-modal aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal__overlay" data-modal-close></div>
+      <div class="modal__content">
+        <h2 id="modal-title">Заявка отправлена</h2>
+        <p>Спасибо! Мы свяжемся с Вами в ближайшее время для подтверждения брони.</p>
+        <button class="modal__close" type="button" data-modal-close>Закрыть</button>
+      </div>
+    </div>
+  </body>
+</html>
