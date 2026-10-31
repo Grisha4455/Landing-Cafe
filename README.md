@@ -4,6 +4,9 @@
 
 **Демо:** https://grisha4455.github.io/Landing-Cafe/
 
+
+![Скриншот](docs/screenshot.png)
+
 ## Что внутри
 
 - Первый экран с фото и призывом забронировать стол
